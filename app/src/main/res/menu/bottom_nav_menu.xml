@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Meets"
+        android:id="@+id/meetFragment"
+        android:icon="@drawable/ic_baseline_videocam_24"
+        android:iconTint="@color/white"/>
+    <item android:title="Link"
+        android:id="@+id/linkFragment"
+        android:icon="@drawable/ic_baseline_link_24"
+        android:iconTint="@color/white"/>
+    <item android:title="Share"
+        android:id="@+id/shareFragment"
+        android:icon="@drawable/ic_baseline_phonelink_24"
+        android:iconTint="@color/white"/>
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/meetFragment">
+
+    <fragment
+        android:id="@+id/meetFragment"
+        android:name="com.ddevs.linkit.view.MeetFragment"
+        android:label="fragment_meet"
+        tools:layout="@layout/fragment_meet" />
+    <fragment
+        android:id="@+id/addLinkFragment"
+        android:name="com.ddevs.linkit.view.AddLinkFragment"
+        android:label="fragment_add_link"
+        tools:layout="@layout/fragment_add_link" />
+    <fragment
+        android:id="@+id/linkFragment"
+        android:name="com.ddevs.linkit.view.LinkFragment"
+        android:label="fragment_link"
+        tools:layout="@layout/fragment_link" />
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.ddevs.linkit.view.ShareFragment"
+        android:label="fragment_share"
+        tools:layout="@layout/fragment_share" />
+</navigation>
