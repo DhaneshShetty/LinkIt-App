@@ -3,6 +3,10 @@
     package="com.ddevs.linkit">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -11,14 +15,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LinkIt">
+
+        <activity android:name=".view.ShareActivity">
+            <intent-filter android:label="Share through LinkIt">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.chooser.chooser_target_service"
+                android:value="androidx.sharetarget.ChooserTargetServiceCompat" />
+        </activity>
+
+        <service
+            android:name=".LinkShareService"
+            android:enabled="true"
+            android:exported="false" />
+
         <activity android:name=".view.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
-        <activity android:name=".view.MainActivity"/>
-    </application>
 
+        <activity android:name=".view.MainActivity">
+            <intent-filter android:label="Add to LinkIt">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.chooser.chooser_target_service"
+                android:value="androidx.sharetarget.ChooserTargetServiceCompat" />
+        </activity>
+
+    </application>
 </manifest>

@@ -9,7 +9,11 @@
         android:id="@+id/meetFragment"
         android:name="com.ddevs.linkit.view.MeetFragment"
         android:label="fragment_meet"
-        tools:layout="@layout/fragment_meet" />
+        tools:layout="@layout/fragment_meet" >
+        <action
+            android:id="@+id/action_meetFragment_to_addLinkFragment"
+            app:destination="@id/addLinkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addLinkFragment"
         android:name="com.ddevs.linkit.view.AddLinkFragment"
@@ -19,10 +23,10 @@
         android:id="@+id/linkFragment"
         android:name="com.ddevs.linkit.view.LinkFragment"
         android:label="fragment_link"
-        tools:layout="@layout/fragment_link" />
-    <fragment
-        android:id="@+id/shareFragment"
-        android:name="com.ddevs.linkit.view.ShareFragment"
-        android:label="fragment_share"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/fragment_link" >
+        <action
+            android:id="@+id/action_linkFragment_to_addLinkFragment"
+            app:destination="@id/addLinkFragment"
+            app:popUpTo="@id/linkFragment" />
+    </fragment>
 </navigation>

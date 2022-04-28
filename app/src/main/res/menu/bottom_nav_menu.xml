@@ -8,8 +8,4 @@
         android:id="@+id/linkFragment"
         android:icon="@drawable/ic_baseline_link_24"
         android:iconTint="@color/white"/>
-    <item android:title="Share"
-        android:id="@+id/shareFragment"
-        android:icon="@drawable/ic_baseline_phonelink_24"
-        android:iconTint="@color/white"/>
 </menu>

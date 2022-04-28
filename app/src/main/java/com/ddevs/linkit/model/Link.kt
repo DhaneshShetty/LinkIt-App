@@ -9,13 +9,12 @@ import java.sql.Time
 @Entity(tableName = "links_table")
 data class Link(
     @PrimaryKey(autoGenerate = true)
-    val linkId:Long,
+    val linkId:Long=0L,
     @ColumnInfo(name="url")
-    val url:URL,
+    val url:String="",
     @ColumnInfo(name="title")
-    val title:String,
+    val title:String="",
     @ColumnInfo(name="category")
-    val category:String,
-    val notes:String,
-    val meet:Boolean,
-    val remindTime:Time)
+    val category:String="",
+    @ColumnInfo(name="notes")
+    val notes:String="")

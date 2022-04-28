@@ -5,8 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.ddevs.linkit.model.Link
+import com.ddevs.linkit.model.MeetLink
+import com.ddevs.linkit.model.ShareLink
 
-@Database(entities=[Link::class],version=1,exportSchema = false)
+@Database(entities=[Link::class,ShareLink::class,MeetLink::class],version=1,exportSchema = false)
 abstract class LinkDatabase: RoomDatabase() {
     abstract val linkDao:LinkDAO
 
